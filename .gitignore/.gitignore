@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<title>Omdb</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<style>
+#movies img, #movie img {
+	width:100%;
+	font-style:Blue;
+}
+@media (min-width:960px 1200px) {
+    #movies .col-lg  .well {	
+	height:20px;
+	width:100%;
+	font-style:Blue;
+}
+#movies  .col-lg img {
+	height:240px;
+}
+.alert {
+	display:none;
+}
+.ui-icon  {
+	background-image:  url(icons.png);
+}
+};
+</style>
+<body>
+
+   <nav class="navbar navbar-lightbg-light">
+	<div class="container">
+	<div class="navbar-header">
+	<a class="navbar-brand" href="#">
+	<img src="images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+	</a>
+        </div>
+        <div class="alert alert-warning" role="alert">
+	<span class="font-weight-bold"></span>
+                <span class="font-height-bold"></span>
+        </div>
+         </div>
+</div>
+</nav>
+
+<div class=" container">
+	<div class="jumbotron">
+                      <h3 class ="text-center">MediPedia</h3>
+	      <form  id="searchform">
+	<input type="text" class="form control" id="searchText" placeholder="Search Movie...">
+                </div>
+	      <p class="Genre"></p>
+	      <p class="rating"></p>
+                </form>
+</div>
+</div>
+
+<div class="container-fluid">
+	<div id="movie" class="well"></div>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script src="js/omdb api.js"></script>
+<script>
+	getMovie();
+</script>
+</body>
+</html>
+{
+	"Plot":4,
+	"message":"success",
+	"actor" : {
+	{
+		"name:"Thumnail",
+		"Imdb Id": 2009,
+	},
+	{
+		"name:"Deadly women",
+		"Imdb Id": 2008,
+	},
+	{
+		"name":"Home Along",
+		"Imdb Id": 1990,
+	},
+	{
+		"name":"Radrum",	
+		"Imdb Id":2013,
+	}}
+}
+		
+$(document).ready(()=> {
+   $('#btnsearchForm').on('submit') 
+         let searchText=$('#searchText').val();
+         getMovies(searchText);	
+          e.preventDefault();
+    });
+
+function getMovies(_searchText) {
+  async.url('http://www.omdbapi.com/?apikey=[bb352dca]&s=')
+    .then((response)=> {
+       console.log(response)
+        let movies= response
+        $.each(movies, (_movie) => {
+            output +=
+                <div class="col-lg" class="well Text-center" src="$(movie. Poster)" onclick="movieSelected('$(movie.imdbID)')" class="btn btn primary" href="#">MovieDetails
+                </div>;
+        });
+
+$ajax({
+    type:'GET',
+    dataType:'json',
+    url:'https://www.omdbapi.com/?apikey=bb352dca'+arg,
+    success:(data)=> {
+        makeData(data)
+    },
+    error:(_data)=> {
+    alert("some error occured")
+    }
+},
+beforeSend (), {
+    alert:["request is begin made.please wait"]
+
+});
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+	
+	
+	
+
+	
